@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "mybucket" {
+resource "aws_s3_bucket" "mybucket_123" {
   bucket = "my-tf-oct15"
 
   tags = {
