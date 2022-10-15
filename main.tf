@@ -1,13 +1,5 @@
-resource "aws_s3_bucket" "mybucket_123" {
-  bucket = "my-tf-oct15"
-
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
-  }
-}
 resource "aws_vpc" "main" {
-  cidr_block       = "10.0.0.0/16"
+  cidr_block       = var.vpc_range  
   instance_tenancy = "default"
 
   tags = {
