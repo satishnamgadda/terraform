@@ -1,4 +1,4 @@
-pipeline {
+pipeline {i
     agent { label "JDK-11" }
     stages {
         stage('vcs') {
@@ -15,7 +15,7 @@ pipeline {
         
         stage('Terraform apply') {
             steps{
-                sh 'terraform destroy --auto-approve'
+                sh 'terraform apply --auto-approve'
             }
         }
     }
