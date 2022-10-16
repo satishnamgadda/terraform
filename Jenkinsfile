@@ -12,10 +12,9 @@ pipeline {
                 sh 'terraform init'
             }
         }
-        
         stage('Terraform apply') {
             steps{
-                sh 'terraform apply -var-file "dev.tfvars" -auto-approve'
+                sh 'terraform apply -var-file="dev.tfvars" -auto-approve'
             }
         }
     }
